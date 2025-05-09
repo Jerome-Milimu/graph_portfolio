@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jerome Wendoh Milimu | Generative AI Portfolio</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== THEME VARIABLES (Navy & Gold – Emphasized) ===== */
+    :root {
+      --clr-bg: #dcdfe4;             /* light grey canvas */
+      --clr-surface: #ffffff;         /* white card */
+      --clr-surface-alt: #0b2434;     /* navy card */
+      --clr-text: #2f2f2f;            /* body text */
+      --clr-heading: #0b2434;         /* dark heading */
+      --clr-accent: #d1b46a;          /* brighter gold accent */
+      --radius: 1rem;                 /* card radius */
+      --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      --max-width: 1100px;
+    }
+
+    /* ===== RESET ===== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--clr-bg);
+      color: var(--clr-text);
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    /* ===== CONTAINER ===== */
+    .card-wrapper {
+      background: var(--clr-surface);
+      max-width: var(--max-width);
+      margin: 0 auto;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border: 4px solid var(--clr-accent);
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      line-height: 1.2;
+      color: var(--clr-heading);
+    }
+    h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 1.9rem;
+      margin-bottom: 1.5rem;
+      color: var(--clr-accent);
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 90px;
+      height: 4px;
+      background: var(--clr-accent);
+    }
+    h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      font-size: 1.15rem;
+      margin: 1.75rem 0 0.75rem;
+      color: var(--clr-accent);
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      text-align: center;
+      padding: 3.5rem 1rem 2.5rem;
+      background: var(--clr-surface);
+    }
+    header p { margin-top: 0.75rem; font-size: 1.05rem; opacity: 0.85; }
+    .hero-img { margin: 2rem auto 0; max-width: 90%; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 3px solid var(--clr-accent); }
+    .hero-img img { width: 100%; height: auto; display: block; }
+
+    /* ===== NAV ===== */
+    nav { margin-top: 2rem; }
+    nav a { text-decoration: none; margin: 0 1rem; font-size: 1rem; color: var(--clr-accent); font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; position: relative; }
+    nav a::after { content: ''; position: absolute; left: 0; bottom: -4px; width: 100%; height: 2px; background: var(--clr-accent); transform: scaleX(0); transform-origin: right; transition: transform 0.3s ease; }
+    nav a:hover::after { transform: scaleX(1); transform-origin: left; }
+
+    /* ===== SECTIONS ===== */
+    section { padding: 3rem 2rem; }
+    ul, ol { margin-left: 1.25rem; }
+    a { color: var(--clr-accent); }
+
+    .alt-bg { background: var(--clr-surface-alt); color: #ffffff; }
+    .alt-bg a, .alt-bg h2, .alt-bg h3 { color: var(--clr-accent); }
+    .alt-bg h2::after { background: var(--clr-accent); }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--clr-surface); text-align: center; padding: 2rem 1rem 2.5rem; font-size: 0.9rem; color: var(--clr-heading); border-top: 3px solid var(--clr-accent); }
+  </style>
+</head>
+<body>
+  <div class="card-wrapper">
+    <header>
+      <h1>Jerome Wendoh Milimu</h1>
+      <p>Driving Data‑Led Solutions&nbsp;|&nbsp;Generative&nbsp;AI&nbsp;Enthusiast</p>
+      <figure class="hero-img"><img src="e8dcb755-f708-4cda-aaaf-a9aad0c42ed2.png" alt="Portfolio theme reference" /></figure>
+      <nav>
+        <a href="#about">About Me</a>
+        <a href="#course">Course</a>
+        <a href="#submissions">Submissions</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>I am a data‑driven professional with 10+ years of experience leading data analytics and utilization across research and program implementation. I translate complex data into actionable insights for strategic decision‑making and enhanced operational performance. My expertise spans designing impactful research initiatives, managing cross‑functional teams, and fostering stakeholder collaboration. I am proficient in R, Python, SQL, Tableau, and Power&nbsp;BI, and I apply rigorous analytical methodologies to achieve measurable outcomes in diverse organizational contexts. With a passion for building data literacy and driving evidence‑based practices, I am now eager to harness Generative AI for Work &amp; Research to elevate productivity and unlock new innovation opportunities.</p>
+      </section>
+
+      <section id="course" class="alt-bg">
+        <h2>About the Course</h2>
+        <p><strong>Generative AI for Work &amp; Research Productivity</strong> is an eight‑week live online certification that equips professionals with no‑code AI tools to automate analysis, content creation, and routine tasks.</p>
+        <ul>
+          <li><strong>Start Date:</strong> May 9, 2025</li>
+          <li><strong>Duration:</strong> 8 weeks</li>
+          <li><strong>Format:</strong> Live workshops (Fridays 3 pm GMT ▸ Sundays 5 pm GMT)</li>
+          <li><strong>Capstone:</strong> Design and showcase a real‑world AI solution</li>
+        </ul>
+        <h3>Key Skills</h3>
+        <ul>
+          <li>Automate document and data workflows</li>
+          <li>AI‑powered literature reviews &amp; knowledge management</li>
+          <li>Custom GPT chatbots &amp; RAG systems</li>
+          <li>Data dashboards &amp; visualizations</li>
+          <li>Workflow automation with Lindy &amp; Make.com</li>
+        </ul>
+      </section>
+
+      <section id="submissions">
+        <h2>My Weekly Submissions</h2>
+        <p>Links to each week’s project will appear here as the course progresses:</p>
+        <ol>
+          <li>Week 1 – Documents, Presentations &amp; Websites: <em>coming soon</em></li>
+          <li>Week 2 – Automated Data Analysis: <em>coming soon</em></li>
+          <li>Week 3 – GenAI for Research &amp; Text Analysis: <em>coming soon</em></li>
+          <li>Week 4 – Custom GPTs &amp; Chatbots: <em>coming soon</em></li>
+          <li>Week 5 – AI Workflows for Task Automation: <em>coming soon</em></li>
+          <li>Week 6 – GenAI for Communication &amp; Outreach: <em>coming soon</em></li>
+          <li>Week 7 – Capstone Prep: <em>coming soon</em></li>
+          <li>Week 8 – Capstone Showcase: <em>coming soon</em></li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>© 2025 Jerome Wendoh Milimu • Portfolio for “Generative AI for Work &amp; Research” course</footer>
+  </div>
+</body>
+</html>
