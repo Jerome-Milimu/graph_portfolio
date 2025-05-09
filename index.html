@@ -10,18 +10,17 @@
   <style>
     /* ===== THEME VARIABLES (Navy & Gold – Emphasized) ===== */
     :root {
-      --clr-bg: #dcdfe4;             /* light grey canvas */
-      --clr-surface: #ffffff;         /* white card */
-      --clr-surface-alt: #0b2434;     /* navy card */
-      --clr-text: #2f2f2f;            /* body text */
-      --clr-heading: #0b2434;         /* dark heading */
-      --clr-accent: #d1b46a;          /* brighter gold accent */
-      --radius: 1rem;                 /* card radius */
+      --clr-bg: #dcdfe4;
+      --clr-surface: #ffffff;
+      --clr-surface-alt: #0b2434;
+      --clr-text: #2f2f2f;
+      --clr-heading: #0b2434;
+      --clr-accent: #d1b46a;
+      --radius: 1rem;
       --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       --max-width: 1100px;
     }
 
-    /* ===== RESET ===== */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
@@ -32,7 +31,6 @@
       padding: 2rem 1rem;
     }
 
-    /* ===== CONTAINER ===== */
     .card-wrapper {
       background: var(--clr-surface);
       max-width: var(--max-width);
@@ -43,7 +41,6 @@
       border: 4px solid var(--clr-accent);
     }
 
-    /* ===== TYPOGRAPHY ===== */
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.5rem, 6vw, 4rem);
@@ -76,23 +73,48 @@
       color: var(--clr-accent);
     }
 
-    /* ===== HEADER ===== */
     header {
       text-align: center;
-      padding: 3.5rem 1rem 2.5rem;
+      padding: 3rem 1rem 2.5rem;
       background: var(--clr-surface);
     }
     header p { margin-top: 0.75rem; font-size: 1.05rem; opacity: 0.85; }
-    .hero-img { margin: 2rem auto 0; max-width: 90%; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 3px solid var(--clr-accent); }
-    .hero-img img { width: 100%; height: auto; display: block; }
 
-    /* ===== NAV ===== */
+    .profile-img {
+      margin: 2rem auto 0;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 4px solid var(--clr-accent);
+    }
+    .profile-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
     nav { margin-top: 2rem; }
-    nav a { text-decoration: none; margin: 0 1rem; font-size: 1rem; color: var(--clr-accent); font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; position: relative; }
-    nav a::after { content: ''; position: absolute; left: 0; bottom: -4px; width: 100%; height: 2px; background: var(--clr-accent); transform: scaleX(0); transform-origin: right; transition: transform 0.3s ease; }
+    nav a {
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1rem;
+      color: var(--clr-accent);
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background: var(--clr-accent);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
     nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 
-    /* ===== SECTIONS ===== */
     section { padding: 3rem 2rem; }
     ul, ol { margin-left: 1.25rem; }
     a { color: var(--clr-accent); }
@@ -101,7 +123,6 @@
     .alt-bg a, .alt-bg h2, .alt-bg h3 { color: var(--clr-accent); }
     .alt-bg h2::after { background: var(--clr-accent); }
 
-    /* ===== FOOTER ===== */
     footer { background: var(--clr-surface); text-align: center; padding: 2rem 1rem 2.5rem; font-size: 0.9rem; color: var(--clr-heading); border-top: 3px solid var(--clr-accent); }
   </style>
 </head>
@@ -110,7 +131,10 @@
     <header>
       <h1>Jerome Wendoh Milimu</h1>
       <p>Driving Data‑Led Solutions&nbsp;|&nbsp;Generative&nbsp;AI&nbsp;Enthusiast</p>
-      <figure class="hero-img"><img src="e8dcb755-f708-4cda-aaaf-a9aad0c42ed2.png" alt="Portfolio theme reference" /></figure>
+      <!-- Profile Photo -->
+      <figure class="profile-img">
+        <img src="https://github.com/Jerome-Milimu/graph_portfolio/blob/main/Jerome_LinkekdIn%20Profile.png?raw=true" alt="Jerome Wendoh Milimu profile photo" />
+      </figure>
       <nav>
         <a href="#about">About Me</a>
         <a href="#course">Course</a>
@@ -121,7 +145,7 @@
     <main>
       <section id="about">
         <h2>About Me</h2>
-        <p>I am a data‑driven professional with 10+ years of experience leading data analytics and utilization across research and program implementation. I translate complex data into actionable insights for strategic decision‑making and enhanced operational performance. My expertise spans designing impactful research initiatives, managing cross‑functional teams, and fostering stakeholder collaboration. I am proficient in R, Python, SQL, Tableau, and Power&nbsp;BI, and I apply rigorous analytical methodologies to achieve measurable outcomes in diverse organizational contexts. With a passion for building data literacy and driving evidence‑based practices, I am now eager to harness Generative AI for Work &amp; Research to elevate productivity and unlock new innovation opportunities.</p>
+        <p>I am a data‑driven professional with 10+ years of experience leading data analytics and utilization across research and program implementation. I translate complex data into actionable insights for strategic decision‑making and enhanced operational performance. My expertise spans designing impactful research initiatives, managing cross‑functional teams, and fostering stakeholder collaboration. I am proficient in R, Python, SQL, Tableau, and Power BI, and I apply rigorous analytical methodologies to achieve measurable outcomes in diverse organizational contexts. With a passion for building data literacy and driving evidence‑based practices, I am now eager to harness Generative AI for Work &amp; Research to elevate productivity and unlock new innovation opportunities.</p>
       </section>
 
       <section id="course" class="alt-bg">
@@ -151,15 +175,4 @@
           <li>Week 2 – Automated Data Analysis: <em>coming soon</em></li>
           <li>Week 3 – GenAI for Research &amp; Text Analysis: <em>coming soon</em></li>
           <li>Week 4 – Custom GPTs &amp; Chatbots: <em>coming soon</em></li>
-          <li>Week 5 – AI Workflows for Task Automation: <em>coming soon</em></li>
-          <li>Week 6 – GenAI for Communication &amp; Outreach: <em>coming soon</em></li>
-          <li>Week 7 – Capstone Prep: <em>coming soon</em></li>
-          <li>Week 8 – Capstone Showcase: <em>coming soon</em></li>
-        </ol>
-      </section>
-    </main>
-
-    <footer>© 2025 Jerome Wendoh Milimu • Portfolio for “Generative AI for Work &amp; Research” course</footer>
-  </div>
-</body>
-</html>
+          <li>Week 5 – AI Workflows for Task Automation: <em>coming soon</
