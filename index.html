@@ -40,49 +40,12 @@
       border: 4px solid var(--clr-accent);
     }
 
-    /* ---------- HERO SECTION ---------- */
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      padding: 4rem 2rem;
-      background: var(--clr-surface-alt);
-      color: #ffffff;
-    }
-    .hero-content { max-width: 600px; }
-    .hero h1 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
+    h1 {
+      font-family: 'Playfair Display', serif;
       font-size: clamp(2.5rem, 6vw, 4rem);
-      margin-bottom: 0.5rem;
-      line-height: 1.1;
+      line-height: 1.2;
+      color: var(--clr-heading);
     }
-    .hero .name { color: var(--clr-accent); }
-    .hero .tagline {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(2rem, 5vw, 3rem);
-      color: #ff4d4d;
-      margin-bottom: 1rem;
-    }
-    .hero .subtitle {
-      font-size: 1.1rem;
-      opacity: 0.95;
-      margin-bottom: 1.5rem;
-    }
-    .hero-img {
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 5px solid #ffffff;
-      flex-shrink: 0;
-      box-shadow: var(--shadow);
-    }
-    .hero-img img { width: 100%; height: 100%; object-fit: cover; }
-
-    /* ---------- HEADINGS & TEXT ---------- */
     h2 {
       font-family: 'Barlow Condensed', sans-serif;
       text-transform: uppercase;
@@ -109,11 +72,28 @@
       color: var(--clr-accent);
     }
 
-    /* ---------- NAVIGATION ---------- */
-    nav { margin-top: 1rem; }
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2.5rem;
+      background: var(--clr-surface);
+    }
+    header p { margin-top: 0.75rem; font-size: 1.05rem; opacity: 0.85; }
+
+    .profile-img {
+      margin: 2rem auto 0;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 4px solid var(--clr-accent);
+    }
+    .profile-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    nav { margin-top: 2rem; }
     nav a {
       text-decoration: none;
-      margin: 0 1rem 0.5rem 0;
+      margin: 0 1rem;
       font-size: 1rem;
       color: var(--clr-accent);
       font-family: 'Barlow Condensed', sans-serif;
@@ -134,7 +114,6 @@
     }
     nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 
-    /* ---------- GENERAL ELEMENTS ---------- */
     section { padding: 3rem 2rem; }
     ul, ol { margin-left: 1.25rem; }
     a { color: var(--clr-accent); }
@@ -148,41 +127,92 @@
 </head>
 <body>
   <div class="card-wrapper">
-    <!-- HERO SECTION -->
-    <header class="hero">
-      <div class="hero-content">
-        <h1>Hello, I'm <span class="name">Jerome Wendoh Milimu</span></h1>
-        <h2 class="tagline">Data‑Led Solutions Leader</h2>
-        <p class="subtitle">🚀 Transforming complex data into actionable insights &amp; harnessing Generative AI to elevate research and operations.</p>
-        <nav>
-          <a href="#about">About Me</a>
-          <a href="#course">Course</a>
-          <a href="#submissions">Submissions</a>
-          <a href="#contact">Consultation</a>
-        </nav>
-      </div>
-      <figure class="hero-img">
+    <header>
+      <h1>Jerome Wendoh Milimu</h1>
+      <p>Driving Data‑Led Solutions&nbsp;|&nbsp;Generative&nbsp;AI&nbsp;Enthusiast</p>
+      <figure class="profile-img">
         <img src="https://github.com/Jerome-Milimu/graph_portfolio/blob/main/Jerome_LinkekdIn%20Profile.png?raw=true" alt="Jerome Wendoh Milimu profile photo" />
       </figure>
+      <nav>
+        <a href="#about">About Me</a>
+        <a href="#course">Course</a>
+        <a href="#submissions">Submissions</a>
+        <a href="#contact">Consultation</a>
+      </nav>
     </header>
 
     <main>
       <section id="about">
         <h2>About Me</h2>
-        <p>I am a data-driven professional with 10+ years of experience leading data analytics and utilization across research and program implementation. I translate complex data into actionable insights for strategic decision-making and enhanced operational performance. My expertise spans designing impactful research initiatives, managing cross-functional teams, and fostering stakeholder collaboration. I am proficient in R, Python, SQL, Tableau, and Power BI, and I apply rigorous analytical methodologies to achieve measurable outcomes in diverse organizational contexts. With a passion for building data literacy and driving evidence-based practices, I am now eager to harness Generative AI for Work &amp; Research to elevate productivity and unlock new innovation opportunities.</p>
+        <p>I am a data‑driven professional with 10+ years of experience leading data analytics and utilization across research and program implementation. I translate complex data into actionable insights for strategic decision‑making and enhanced operational performance. My expertise spans designing impactful research initiatives, managing cross‑functional teams, and fostering stakeholder collaboration. I am proficient in R, Python, SQL, Tableau, and Power BI, and I apply rigorous analytical methodologies to achieve measurable outcomes in diverse organizational contexts. With a passion for building data literacy and driving evidence‑based practices, I am now eager to harness Generative AI for Work &amp; Research to elevate productivity and unlock new innovation opportunities.</p>
       </section>
 
       <section id="course" class="alt-bg">
         <h2>About the Course</h2>
-        <p><strong>Generative AI for Work &amp; Research Productivity</strong> is an eight-week live online certification that equips professionals with no-code AI tools to automate analysis, content creation, and routine tasks.</p>
+        <p><strong>Generative AI for Work &amp; Research Productivity</strong> is an eight‑week live online certification that equips professionals with no‑code AI tools to automate analysis, content creation, and routine tasks.</p>
         <ul>
           <li><strong>Start Date:</strong> May 9, 2025</li>
           <li><strong>Duration:</strong> 8 weeks</li>
-          <li><strong>Format:</strong> Live workshops (Fridays 3 pm GMT ▸ Sundays 5 pm GMT)</li>
-          <li><strong>Capstone:</strong> Design and showcase a real-world AI solution</li>
+          <li><strong>Format:</strong> Live workshops (Fridays 3 pm GMT ▸ Sundays 5 pm GMT)</li>
+          <li><strong>Capstone:</strong> Design and showcase a real‑world AI solution</li>
         </ul>
         <h3>Key Skills</h3>
         <ul>
           <li>Automate document and data workflows</li>
-          <li>AI-powered literature reviews &amp; knowledge management</li>
-          <
+          <li>AI‑powered literature reviews &amp; knowledge management</li>
+          <li>Custom GPT chatbots &amp; RAG systems</li>
+          <li>Data dashboards &amp; visualizations</li>
+          <li>Workflow automation with Lindy &amp; Make.com</li>
+        </ul>
+      </section>
+
+      <section id="submissions">
+        <h2>My Weekly Submissions</h2>
+        <p>Links to each week’s project will appear here as the course progresses:</p>
+        <ol>
+          <li>Week 1 – Documents, Presentations &amp; Websites: <em>this website</em></li>
+          <li>
+            Week 2 – Automated Data Analysis:
+            <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/Jerome-Milimu/graph_portfolio/main/week_2_workshop_assignment.html"
+               target="_blank" rel="noopener noreferrer">View assignment</a>
+          </li>
+          <li>
+            Week 3 – GenAI for Research &amp; Text Analysis: 
+            <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/Jerome-Milimu/graph_portfolio/main/week_3_workshop_assignment.html"
+               target="_blank" rel="noopener noreferrer">View assignment</a>
+          </li>
+          <li>Week 4 – Custom GPTs &amp; Chatbots: <em>embedding a chatbot on this website</em></li>
+          <li>Week 5 – AI Workflows for Task Automation: <em>adding a Google consultation form</em></li>
+          <li>
+            Week 6 – Advanced Visualizations &amp; Dashboards: 
+            <a href="https://github.com/Jerome-Milimu/graph_portfolio/blob/main/Graph%20Courses%20-%20AI%20Portfolio%20flyer.png?raw=true" target="_blank" rel="noopener noreferrer">View flyer</a>
+          </li>
+          <li>Week 7 – AI Strategy &amp; Ethics: <em>coming soon</em></li>
+          <li>Week 8 – Capstone Showcase: <em>coming soon</em></li>
+        </ol>
+      </section>
+
+      <section id="contact" class="alt-bg">
+        <h2>Contact for Consultation</h2>
+        <p>If you're interested in a consultation or collaboration, please fill out the form below and I’ll get back to you shortly.</p>
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdO6m2d-EGy_9AJH30k84C-akgRDKhbU0wLPYS3ts1KMGeQDA/viewform?embedded=true" 
+          width="100%" 
+          height="800" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0"
+          style="border: none; max-width: 100%;">
+          Loading…
+        </iframe>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2025 Jerome Wendoh Milimu. All rights reserved.
+    </footer>
+  </div>
+  <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/05/30/15/20250530154330-W6WOU6VD.js"></script>
+</body>
+</html>
