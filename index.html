@@ -11,12 +11,12 @@
     :root {
       --clr-bg: #dcdfe4;
       --clr-surface: #ffffff;
-      --clr-surface-alt: #0b2434;
+      --clr-surface-alt: #0b2434; /* deep navy */
       --clr-text: #2f2f2f;
       --clr-heading: #0b2434;
-      --clr-accent: #d1b46a;
+      --clr-accent: #d1b46a; /* gold accent */
       --radius: 1rem;
-      --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      --shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
       --max-width: 1100px;
     }
 
@@ -30,6 +30,7 @@
       padding: 2rem 1rem;
     }
 
+    /* ---------- CARD WRAPPER ---------- */
     .card-wrapper {
       background: var(--clr-surface);
       max-width: var(--max-width);
@@ -40,12 +41,90 @@
       border: 4px solid var(--clr-accent);
     }
 
-    h1 {
+    /* ---------- HERO SECTION ---------- */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      padding: 4rem 2rem 3.5rem;
+      background: var(--clr-surface-alt);
+      color: #ffffff;
+    }
+    .hero-content {
+      flex: 1 1 420px;
+      min-width: 260px;
+    }
+    .hero-content .greeting {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      opacity: 0.9;
+    }
+    .hero-content .name {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.5rem, 6vw, 4rem);
-      line-height: 1.2;
-      color: var(--clr-heading);
+      line-height: 1.15;
+      margin: 0.2rem 0;
     }
+    .hero-content .role {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      margin-bottom: 1.2rem;
+    }
+    .hero-content .tagline {
+      font-size: 1.1rem;
+      max-width: 620px;
+      line-height: 1.6;
+    }
+
+    .hero-img {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 6px solid #ffffff;
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
+    }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ---------- NAVIGATION ---------- */
+    nav {
+      margin: 0; /* reset margin because now inside header */
+      background: var(--clr-surface);
+      padding: 1rem 2rem 1.2rem;
+      text-align: center;
+      border-top: 3px solid var(--clr-accent);
+    }
+    nav a {
+      text-decoration: none;
+      margin: 0 1.1rem;
+      font-size: 1rem;
+      color: var(--clr-heading);
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background: var(--clr-accent);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+    nav a:hover::after { transform: scaleX(1); transform-origin: left; }
+
+    /* ---------- HEADINGS ---------- */
     h2 {
       font-family: 'Barlow Condensed', sans-serif;
       text-transform: uppercase;
@@ -72,48 +151,7 @@
       color: var(--clr-accent);
     }
 
-    header {
-      text-align: center;
-      padding: 3rem 1rem 2.5rem;
-      background: var(--clr-surface);
-    }
-    header p { margin-top: 0.75rem; font-size: 1.05rem; opacity: 0.85; }
-
-    .profile-img {
-      margin: 2rem auto 0;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 4px solid var(--clr-accent);
-    }
-    .profile-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-    nav { margin-top: 2rem; }
-    nav a {
-      text-decoration: none;
-      margin: 0 1rem;
-      font-size: 1rem;
-      color: var(--clr-accent);
-      font-family: 'Barlow Condensed', sans-serif;
-      text-transform: uppercase;
-      position: relative;
-    }
-    nav a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 100%;
-      height: 2px;
-      background: var(--clr-accent);
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.3s ease;
-    }
-    nav a:hover::after { transform: scaleX(1); transform-origin: left; }
-
+    /* ---------- SECTIONS ---------- */
     section { padding: 3rem 2rem; }
     ul, ol { margin-left: 1.25rem; }
     a { color: var(--clr-accent); }
@@ -122,17 +160,46 @@
     .alt-bg a, .alt-bg h2, .alt-bg h3 { color: var(--clr-accent); }
     .alt-bg h2::after { background: var(--clr-accent); }
 
-    footer { background: var(--clr-surface); text-align: center; padding: 2rem 1rem 2.5rem; font-size: 0.9rem; color: var(--clr-heading); border-top: 3px solid var(--clr-accent); }
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--clr-surface);
+      text-align: center;
+      padding: 2rem 1rem 2.5rem;
+      font-size: 0.9rem;
+      color: var(--clr-heading);
+      border-top: 3px solid var(--clr-accent);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 760px) {
+      .hero {
+        justify-content: center;
+        text-align: center;
+      }
+      .hero-content {
+        flex: 1 1 100%;
+      }
+      .hero-img { margin: 0 auto; }
+    }
   </style>
 </head>
 <body>
   <div class="card-wrapper">
+    <!-- ===== HERO HEADER ===== -->
     <header>
-      <h1>Jerome Wendoh Milimu</h1>
-      <p>Driving Data‑Led Solutions&nbsp;|&nbsp;Generative&nbsp;AI&nbsp;Enthusiast</p>
-      <figure class="profile-img">
-        <img src="https://github.com/Jerome-Milimu/graph_portfolio/blob/main/Jerome_LinkekdIn%20Profile.png?raw=true" alt="Jerome Wendoh Milimu profile photo" />
-      </figure>
+      <div class="hero">
+        <div class="hero-content">
+          <div class="greeting">Hello, I'm</div>
+          <div class="name">Jerome Wendoh Milimu</div>
+          <div class="role">Data‑Science Leader</div>
+          <p class="tagline">📈 Driving data‑led solutions &amp; generative AI innovation to elevate research programmes and strategic decision‑making.</p>
+        </div>
+        <figure class="hero-img">
+          <img src="https://github.com/Jerome-Milimu/graph_portfolio/blob/main/Jerome_LinkekdIn%20Profile.png?raw=true" alt="Jerome Wendoh Milimu profile photo" />
+        </figure>
+      </div>
+
+      <!-- PRIMARY NAVIGATION -->
       <nav>
         <a href="#about">About Me</a>
         <a href="#course">Course</a>
@@ -141,75 +208,8 @@
       </nav>
     </header>
 
+    <!-- ===== MAIN CONTENT ===== -->
     <main>
       <section id="about">
         <h2>About Me</h2>
-        <p>I am a data‑driven professional with 10+ years of experience leading data analytics and utilization across research and program implementation. I translate complex data into actionable insights for strategic decision‑making and enhanced operational performance. My expertise spans designing impactful research initiatives, managing cross‑functional teams, and fostering stakeholder collaboration. I am proficient in R, Python, SQL, Tableau, and Power BI, and I apply rigorous analytical methodologies to achieve measurable outcomes in diverse organizational contexts. With a passion for building data literacy and driving evidence‑based practices, I am now eager to harness Generative AI for Work &amp; Research to elevate productivity and unlock new innovation opportunities.</p>
-      </section>
-
-      <section id="course" class="alt-bg">
-        <h2>About the Course</h2>
-        <p><strong>Generative AI for Work &amp; Research Productivity</strong> is an eight‑week live online certification that equips professionals with no‑code AI tools to automate analysis, content creation, and routine tasks.</p>
-        <ul>
-          <li><strong>Start Date:</strong> May 9, 2025</li>
-          <li><strong>Duration:</strong> 8 weeks</li>
-          <li><strong>Format:</strong> Live workshops (Fridays 3 pm GMT ▸ Sundays 5 pm GMT)</li>
-          <li><strong>Capstone:</strong> Design and showcase a real‑world AI solution</li>
-        </ul>
-        <h3>Key Skills</h3>
-        <ul>
-          <li>Automate document and data workflows</li>
-          <li>AI‑powered literature reviews &amp; knowledge management</li>
-          <li>Custom GPT chatbots &amp; RAG systems</li>
-          <li>Data dashboards &amp; visualizations</li>
-          <li>Workflow automation with Lindy &amp; Make.com</li>
-        </ul>
-      </section>
-
-      <section id="submissions">
-        <h2>My Weekly Submissions</h2>
-        <p>Links to each week’s project will appear here as the course progresses:</p>
-        <ol>
-          <li>Week 1 – Documents, Presentations &amp; Websites: <em>this website</em></li>
-          <li>
-            Week 2 – Automated Data Analysis:
-            <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/Jerome-Milimu/graph_portfolio/main/week_2_workshop_assignment.html"
-               target="_blank" rel="noopener noreferrer">View assignment</a>
-          </li>
-          <li>
-            Week 3 – GenAI for Research &amp; Text Analysis: 
-            <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/Jerome-Milimu/graph_portfolio/main/week_3_workshop_assignment.html"
-               target="_blank" rel="noopener noreferrer">View assignment</a>
-          </li>
-          <li>Week 4 – Custom GPTs &amp; Chatbots: <em>embedding a chatbot on this website</em></li>
-          <li>Week 5 – AI Workflows for Task Automation: <em>adding a Google consultation form</em></li>
-          <li>Week 6 – Advanced Visualizations &amp; Dashboards: <em>coming soon</em></li>
-          <li>Week 7 – AI Strategy &amp; Ethics: <em>coming soon</em></li>
-          <li>Week 8 – Capstone Showcase: <em>coming soon</em></li>
-        </ol>
-      </section>
-
-      <section id="contact" class="alt-bg">
-        <h2>Contact for Consultation</h2>
-        <p>If you're interested in a consultation or collaboration, please fill out the form below and I’ll get back to you shortly.</p>
-        <iframe 
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdO6m2d-EGy_9AJH30k84C-akgRDKhbU0wLPYS3ts1KMGeQDA/viewform?embedded=true" 
-          width="100%" 
-          height="800" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0"
-          style="border: none; max-width: 100%;">
-          Loading…
-        </iframe>
-      </section>
-    </main>
-
-    <footer>
-      &copy; 2025 Jerome Wendoh Milimu. All rights reserved.
-    </footer>
-  </div>
-  <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2025/05/30/15/20250530154330-W6WOU6VD.js"></script>
-</body>
-</html>
+        <p>I am a data‑driven professional with 10+ years of experience leading data analytics and utilisation across research and programme implementation. I translate complex data into actionable insights for strategic decision‑making and enhanced operational performance. My expertise spans designing impactful research initiatives, managing cross‑functional teams, and fostering stakeholder collaboration. I am proficient in R, Python, SQL, Tableau, and Power BI, and I apply rigorous analytical methodologies to achieve measurable outcomes in diverse organisational contexts. With a passion for building data literacy and driving evidence‑based practices, I am now eager
